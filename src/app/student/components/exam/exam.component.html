@@ -1,0 +1,48 @@
+<div class="examBox">
+    <div class="examhead text-center">
+        <h2>اختبار {{Subject?.name}} </h2>
+    </div>
+    <div class="quizBox" *ngFor="let item of Subject?.question; let index=index">
+        <strong class="text-primary"><span class="text-primary">سؤال {{index+1}}:</span> {{item.question}}</strong>
+        <div class="row mt-3">
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.type=='students' && !showResult && ValidExam "
+                    (change)="getAnswer($event)" value="{{item.answer1}}" name="{{index}}"
+                    color="primary"></mat-radio-button>
+                <label>أ-{{item.answer1}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button *ngIf="user?.type=='students' && !showResult && ValidExam " name="{{index}}"
+                    (change)="getAnswer($event)" value="{{item.answer2}}" color="primary"></mat-radio-button>
+                <label>ب-{{item.answer2}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button color="primary" *ngIf="user?.type=='students' && !showResult && ValidExam"
+                    value="{{item.answer3}}" name="{{index}}" (change)="getAnswer($event)"></mat-radio-button>
+                <label>ج-{{item.answer3}}</label>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <mat-radio-button color="primary" (change)="getAnswer($event)"
+                    *ngIf="user?.type=='students'&& !showResult && ValidExam" name="{{index}}"
+                    value="{{item.answer4}}"></mat-radio-button>
+                <label>د-{{item.answer4}}</label>
+            </div>
+        </div>
+        <div class="text-right" *ngIf="user?.type=='doctor'">
+            <button mat-raised-button class="btn btn-danger" (click)="delete(index)">حذف</button>
+        </div>
+        <hr>
+    </div>
+    <div class="text-center" *ngIf="user?.type=='students'">
+
+        <span *ngIf="showResult || !ValidExam" class="fs-4 text-primary"> {{Subject?.question.length}} / {{total}}
+        </span>
+        <button *ngIf="!showResult && ValidExam" class="btn btn-success mat-mini-fab px-5 fs-5" mat-raised-button
+            color="primary" (click)="getResult()">
+            النتيجة</button>
+    </div>
+
+</div>

@@ -1,0 +1,15 @@
+<mat-nav-list class="nav-caption">
+    <a *ngIf="user!==null" class="username">{{user.username}}</a>
+
+    <a *ngIf="user?.type=='doctor'" routerLink="/new-exam" mat-list-item (click)="Sidenavclose()">أختبار جديد
+    </a>
+    <a *ngIf="user?.type=='doctor'" routerLink="/students" mat-list-item (click)="Sidenavclose()">الطلاب
+    </a>
+
+    <a *ngIf="user!==null" routerLink="/subjects" mat-list-item (click)="Sidenavclose()">المواد</a>
+    <a *ngIf="user!==null" routerLink=" /login" mat-list-item (click)="logout()">خروج</a>
+    <a *ngIf="user==null" routerLink="/login" mat-list-item (click)="Sidenavclose()">دخول</a>
+    <a *ngIf="user==null" routerLink="/register" mat-list-item (click)="Sidenavclose()">تسجيل</a>
+
+
+</mat-nav-list>

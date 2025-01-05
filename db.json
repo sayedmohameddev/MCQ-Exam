@@ -1,0 +1,115 @@
+{
+  "students": [
+    {
+      "username": "mahmoud",
+      "email": "test@test.com",
+      "password": "123456",
+      "id": "1"
+    },
+    {
+      "username": "mm",
+      "email": "test2@test.com",
+      "password": "123456",
+      "Subject": [
+        {
+          "name": "الرياضات",
+          "id": "d534",
+          "degree": 0
+        },
+        {
+          "name": "الرياضات",
+          "id": "d534",
+          "degree": 1
+        }
+      ],
+      "id": "659b"
+    },
+    {
+      "username": "sayed",
+      "email": "a12@test.com",
+      "password": "123456",
+      "Subject": [
+        {
+          "name": "العلوم",
+          "id": "8f95",
+          "degree": 0
+        },
+        {
+          "name": "الرياضات",
+          "id": "d534",
+          "degree": 2
+        },
+        {
+          "name": "ps",
+          "id": "9553",
+          "degree": 0
+        },
+        {
+          "name": "a@test.com",
+          "id": "8c3b",
+          "degree": 0
+        },
+        {
+          "name": "رياضيات",
+          "id": "78ca",
+          "degree": 1
+        }
+      ],
+      "id": "6bbc"
+    },
+    {
+      "id": "c678",
+      "username": "sayed",
+      "email": "a13@test.com",
+      "password": "123456"
+    },
+    {
+      "id": "7801",
+      "username": "dd",
+      "email": "a77@test.com",
+      "password": "123456"
+    },
+    {
+      "username": "sayed",
+      "email": "a1234@test.com",
+      "password": "123456",
+      "Subject": [
+        {
+          "name": "رياضيات",
+          "id": "78ca",
+          "degree": 1
+        }
+      ],
+      "id": "a4ba"
+    }
+  ],
+  "doctor": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@test.com",
+      "password": "123456"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "78ca",
+      "name": "رياضيات",
+      "question": [
+        {
+          "question": "5*5",
+          "answer1": "25",
+          "answer2": "100",
+          "answer3": "10",
+          "answer4": "40",
+          "correctanswer": "25"
+        }
+      ]
+    }
+  ],
+  "login": [
+    {
+      "id": "1"
+    }
+  ]
+}
